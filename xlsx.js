@@ -16805,6 +16805,7 @@ wb.opts.Date1904 = Workbook.WBProps.date1904 = val; break;
 					cc = options.dense ? (out[val[0].r]||[])[val[0].c] : out[encode_cell(val[0])];
 					var noteobj = objects[val[2]];
 					if(!cc) break;
+					if(!noteobj.TxO) break;
 					if(!cc.c) cc.c = [];
 					cmnt = {a:val[1],t:noteobj.TxO.t};
 					cc.c.push(cmnt);
